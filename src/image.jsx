@@ -1,0 +1,1 @@
+export { default as navbarmainlogo}  from "./assets/images/Navbarlogo.jpg"
