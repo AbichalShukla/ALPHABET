@@ -1,9 +1,10 @@
 import { navbarmainlogo } from "../../image"
+ import "../../../src/index.css"
 
 function Navbar() {
   return (
     <nav className="bg-black">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
         <a
           href="/login"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -13,18 +14,16 @@ function Navbar() {
             className="h-20  "
             alt="Please Wait"
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-            Elearning Hub
-          </span>
+        
         </a>
         <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
             data-dropdown-toggle="language-dropdown-menu"
-            className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+            className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white dark:text-white -lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
           >
             <svg
-              className="w-5 h-5 rounded-full me-3"
+              className="w-5 h-5 -full me-3"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -65,7 +64,7 @@ function Navbar() {
           </button>
 
           <div
-            className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+            className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 -lg shadow dark:bg-gray-700"
             id="language-dropdown-menu"
           >
             <ul className="py-2 font-medium" role="none">
@@ -78,7 +77,7 @@ function Navbar() {
                   <div className="inline-flex items-center">
                     <svg
                       aria-hidden="true"
-                      className="h-3.5 w-3.5 rounded-full me-2"
+                      className="h-3.5 w-3.5 -full me-2"
                       xmlns="http://www.w3.org/2000/svg"
                       id="flag-icon-css-us"
                       viewBox="0 0 512 512"
@@ -120,7 +119,7 @@ function Navbar() {
                 >
                   <div className="inline-flex items-center">
                     <svg
-                      className="h-3.5 w-3.5 rounded-full me-2"
+                      className="h-3.5 w-3.5 -full me-2"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       id="flag-icon-css-de"
@@ -142,7 +141,7 @@ function Navbar() {
                 >
                   <div className="inline-flex items-center">
                     <svg
-                      className="h-3.5 w-3.5 rounded-full me-2"
+                      className="h-3.5 w-3.5 -full me-2"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       id="flag-icon-css-it"
@@ -166,7 +165,7 @@ function Navbar() {
                 >
                   <div className="inline-flex items-center">
                     <svg
-                      className="h-3.5 w-3.5 rounded-full me-2"
+                      className="h-3.5 w-3.5 -full me-2"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -221,7 +220,7 @@ function Navbar() {
           <button
             data-collapse-toggle="navbar-language"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 -lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-language"
             aria-expanded="false"
           >
@@ -244,14 +243,14 @@ function Navbar() {
           </button>
         </div>
         <div
-          className="items-center justify-start   w-full md:flex md:w-auto order-1 "
-          id="navbar-language"s
+          className="items-center justify-start   glass-effect  w-full md:flex md:w-auto order-1 "
+          id=" navbarfilter"
         >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border  border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border  border-gray-100 -lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
             <li>
               <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white hover:bg-cyan-900 rounded  "
+                href="/"
+                className="block py-2 px-3 md:p-0 text-white  hover:bg-cyan-900   "
                 aria-current="page"
               >
                 Home
@@ -259,32 +258,32 @@ function Navbar() {
             </li>
             <li>
               <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white rounded hover:bg-cyan-900 md:hover:bg-transparent "
+                href="/about"
+                className="block py-2 px-3 md:p-0  text-white  hover:bg-cyan-900  "
               >
                 About
               </a>
             </li>
             <li>
               <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white rounded hover:bg-cyan-900"
+                href="/services"
+                className="block py-2 px-3 md:p-0 text-white   hover:bg-cyan-900"
               >
                 Services
               </a>
             </li>
             <li>
               <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white rounded hover:bg-cyan-900"
+                href="/pricing"
+                className="block py-2 px-3 md:p-0 text-white  hover:bg-cyan-900"
               >
                 Pricing
               </a>
             </li>
             <li>
               <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white rounded hover:bg-cyan-900"
+                href="/contact"
+                className="block py-2 px-3 md:p-0 text-white  hover:bg-cyan-900"
               >
                 Contact
               </a>

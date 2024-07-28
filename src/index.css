@@ -1,6 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
  
 
-
+.glass-effect {
+  background: rgba(238, 238, 238, 0.1); 
+  backdrop-filter: blur(10px); /* Blur effect */
+ /* Border to enhance the glass effect */
+}
+.visme_d {
+  min-height: 100vh; /* Ensure the form takes up at least the full viewport height */
+}
