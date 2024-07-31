@@ -8,9 +8,7 @@ import Signup from './Auth/Signup';
 import ForgetPassword from './Auth/ForgetPassWord';
 import ResetPassword from './Auth/ResetPassword';
 import ResetPasswordOtp from './Auth/ResetPassswordOtp';
-// import {Contect} from './Context/Contect';
-
-
+import ContactPage from './Contectfiles/ContectPage';
 function App() {
   return (
     <>
@@ -23,7 +21,7 @@ function App() {
           <Route path='/forget-password' element={<ForgetPassword />} />
           <Route path='/reset-password' element={<ResetPassword />} />
           <Route path='/reset-password-otp' element={<ResetPasswordOtp />} />
-          {/* <Route path='/contect' element={<Contect />} /> */}
+          <Route path='/contact' element={<ContactPage />} />
         </Routes>
       </Router>
     </>

@@ -1,14 +1,27 @@
-// src/components/ResetPasswordOtp.js
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import "../../src/index.css";
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const ResetPasswordOtp = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const navigate = useNavigate();
 
-  const onSubmit = (data,e) => {
-     e.preventDefault()
-    console.log(data);
+  const onSubmit = async (data) => {
+    const otp = data.otp.join(''); // Combine OTP digits into a single string
+    try {
+      const response = await axios.post("http://localhost:8080/auth/verify-otp", { email: 'user@example.com', otp }); // Replace 'user@example.com' with actual email from state or props
+      if (response?.data?.success === true) {
+        toast.success("OTP Verified");
+        navigate("/resetpassword");
+      } else {
+        toast.error("Failed to verify OTP");
+      }
+    } catch (error) {
+      toast.error("Failed to verify OTP");
+    }
   };
 
   return (
@@ -28,7 +41,7 @@ const ResetPasswordOtp = () => {
                   key={index}
                   type="text"
                   maxLength="1"
-                  {...register(`otp[${index}]`, { required: "Please Enter Valid Otp" })}
+                  {...register(`otp[${index}]`, { required: "Please Enter Valid OTP" })}
                   className="rounded-full w-12 text-center px-4 py-2 border border-gray-700 focus:outline-none"
                 />
               ))}
@@ -39,6 +52,9 @@ const ResetPasswordOtp = () => {
               </span>
             )}
           </div>
+          <button type="submit" className="w-full bg-cyan-950 text-white py-2 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1">
+            Verify OTP
+          </button>
           <div className="flex justify-between mt-6">
             <a href="/login" className="w-[48%] text-white rounded text-start">
               Return to Login

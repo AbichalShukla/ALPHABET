@@ -1,15 +1,32 @@
 // src/components/LoginForm.js
 import React, { useState } from 'react';
 import "../../src/index.css"
-import { useForm, useWatch  } from 'react-hook-form';
+import { useForm  } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+ import { ToastContainer,toast } from 'react-toastify';
+
  
 
 const Signup = () => {
+ const navigate=useNavigate()
 
-
-  const onSubmit = (data,e) => {
-    e.preventDefault();
-   console.log(data)
+  const onSubmit =async (data,e) => {
+ 
+    // console.log(data)
+   try {
+    const response = await axios.post('http://localhost:8080/auth/register',data);
+//    console.log(response)
+   if (response?.data.success == true) {
+    toast.success("Signup SucessFull")
+    navigate('/login')
+   }else{
+    navigate('/signup')
+     toast.error(" please Enter Valid Credentials")
+   }
+   } catch (error) {
+    console.log("SignUp error",error)
+   }
   };
 
     const {
@@ -20,6 +37,9 @@ const Signup = () => {
 
          
     }=useForm()
+
+
+   
      const password = watch ("password")
 
   return (
@@ -30,6 +50,8 @@ const Signup = () => {
           <div className="mb-4">
             <label className="block text-white">Email</label>
             <input
+            type="email"
+            id="email"
                { ...register("email",{required:true  ,type:"email" , pattern: {
                 value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                 message: "Enter a valid email address",
@@ -78,7 +100,7 @@ const Signup = () => {
           <button
         
             type="submit"
-            className="w-full bg-cyan-950 text-white py-2 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
+            className="w-full bg-cyan-950  text-white py-2 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
           >
           Signup
           </button>

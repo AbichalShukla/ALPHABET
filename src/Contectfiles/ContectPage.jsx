@@ -1,7 +1,9 @@
+
+
 // src/components/VismeEmbed.js
 import React, { useEffect } from 'react';
 
-const Contact = () => {
+const ContactPage = () => {
   useEffect(() => {
 
     const script = document.createElement('script');
@@ -28,4 +30,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;
