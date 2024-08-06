@@ -22,7 +22,7 @@ const Signup = () => {
     navigate('/login')
    }else{
     navigate('/signup')
-     toast.error(" please Enter Valid Credentials")
+     toast.error(" please Enter Valid")
    }
    } catch (error) {
     console.log("SignUp error",error)

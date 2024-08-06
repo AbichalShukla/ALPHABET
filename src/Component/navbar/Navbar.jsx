@@ -1,6 +1,7 @@
 import { navbarmainlogo } from "../../image"
  import "../../../src/index.css"
 
+
 function Navbar() {
   return (
     <nav className="bg-black">
@@ -243,7 +244,7 @@ function Navbar() {
           </button>
         </div>
         <div
-          className="items-center justify-start   glass-effect  w-full md:flex md:w-auto order-1 "
+          className="items-center justify-start     w-full md:flex md:w-auto order-1 "
           id=" navbarfilter"
         >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border  border-gray-100 -lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">

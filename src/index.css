@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+body{
+   background-color:rgb(59, 147, 147);
+  
+  }
  
 
 .glass-effect {

@@ -9,6 +9,10 @@ import ForgetPassword from './Auth/ForgetPassWord';
 import ResetPassword from './Auth/ResetPassword';
 import ResetPasswordOtp from './Auth/ResetPassswordOtp';
 import ContactPage from './Contectfiles/ContectPage';
+import StudentClassList from './StudentClassList/StudentClassList';
+import StudentNtoY from './StudentClassList/StudentNtoY';
+import StudentGtoM from './StudentClassList/StudentGtoM';
+import StudentNtoT from './StudentClassList/StudentNtoT';
 function App() {
   return (
     <>
@@ -22,6 +26,10 @@ function App() {
           <Route path='/reset-password' element={<ResetPassword />} />
           <Route path='/reset-password-otp' element={<ResetPasswordOtp />} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route path='/studentclasslist' element={<StudentClassList />} />
+          <Route path='/studentntoy:id' element={<StudentNtoY />} />
+        <Route path='/studentgtom:id' element={<StudentGtoM />} />
+          <Route path='/studentntot:id' element={<StudentNtoT />} />
         </Routes>
       </Router>
     </>

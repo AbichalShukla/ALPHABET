@@ -38,7 +38,7 @@ const Login = () => {
       if (response?.data?.success === true) {
        const res= toast.success("Login Successful");
        console.log(res)
-        navigate("/");
+        navigate("/studentclasslist");
       } else {
         toast.error("Please enter a valid email and password");
         navigate("/login");

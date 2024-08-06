@@ -2,7 +2,6 @@
 
 // src/components/VismeEmbed.js
 import React, { useEffect } from 'react';
-
 const ContactPage = () => {
   useEffect(() => {
 

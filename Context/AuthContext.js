@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 const authContext = CreateContext();
 
 export const AuthProvider = ({ children }) => {
+    
   const [user, setUser] = useContext();
 
   token: sessionStorage.getItem("data")
