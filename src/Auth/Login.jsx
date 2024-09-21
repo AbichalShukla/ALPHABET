@@ -6,6 +6,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+ import { googlelogopng } from "../image";
+ import { FaGooglePlusG } from "react-icons/fa";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -19,13 +22,15 @@ const Login = () => {
   console.log(errors);
 
 
- const useEffect=(()=>{
+   const useEffect = (()=>{
   onSubmit()
 },[])
 
 
+
+
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
     try {
       const response = await axios.post(
         "http://localhost:8080/auth/login",
@@ -107,9 +112,27 @@ const Login = () => {
             >
               Signup
             </a>
+
           </div>
+        <div className="mt-2 mb-2 flex items-center text-center  ">
+
+        <button
+              type="submit"
+
+              className="w-80 bg-cyan-950 text-white py-2 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
+            >
+      <div  className=" flex items-center justify-center text-center">
+
+
+      <span ><FaGooglePlusG className=" w-10  "></FaGooglePlusG></span>
+      <span>Login With Google</span>
+      </div>
+            </button>
+        </div>
+
+          
         </form>
-        <a href="/forget-password" className="flex gap-1 mt-4 text-white">
+        <a href="/forget-password" className="flex gap-1 mt-4 text-cyan-800">
           Reset Password
         </a>
       </div>

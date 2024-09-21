@@ -9,4 +9,6 @@ export { default as learningslider5}  from "./assets/images/learning8.jpg"
 export { default as learningslider6}  from "./assets/images/learning9.jpg"
 export { default as learningslider7}  from "./assets/images/learning10.jpg"
 export { default as cardimagestudentlist}  from "./assets/images/cardimage.jpg"
-export { default as cardimagestudentlist2}  from "./assets/images/cardimage2.jpg"
+export { default as cardimagestudentlist2}  from "./assets/images/cardimage2.jpg" 
+export { default as googlelogopng}  from "./assets/images/googlelogo.png" 
+

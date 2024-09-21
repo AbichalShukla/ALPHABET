@@ -2,16 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-   background-color:rgb(59, 147, 147);
-  
-  }
- 
+body {
+  background-color:   #083344;
+}
 
 .glass-effect {
-  background: rgba(238, 238, 238, 0.1); 
+  background: rgba(238, 238, 238, 0.1);
   backdrop-filter: blur(10px); /* Blur effect */
- /* Border to enhance the glass effect */
+  /* Border to enhance the glass effect */
 }
 .visme_d {
   min-height: 100vh; /* Ensure the form takes up at least the full viewport height */

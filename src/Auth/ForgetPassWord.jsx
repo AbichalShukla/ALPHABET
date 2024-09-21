@@ -10,7 +10,7 @@ const ForgetPassword = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("http://localhost:8080/auth/reset-password-request", data);
+      const response = await axios.post("http://localhost:8080/auth/forgot-password'", data);
       if (response?.data?.success === true) {
         toast.success("OTP sent to your email");
         navigate("/verify-otp");
