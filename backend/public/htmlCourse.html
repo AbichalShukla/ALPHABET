@@ -1,0 +1,946 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
+ 
+  <!-- Prism.js for Syntax Highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-javascript.min.js"></script> <!-- Add more languages if needed -->
+
+  <style>
+   
+    /* Set the height and border for the editor container */
+    #editorContainer {
+      height: 500px;
+      border: 1px solid #e5e7eb; /* Tailwind light gray */
+    }
+ 
+    html {
+      scroll-behavior: smooth;
+    }
+    #container {
+      height: 400px;
+      width: 100%;
+    }
+     .imglive{
+       width:  670px;
+        height: 377px;
+     }
+     .sidebar{
+       width: 200px;
+     }
+  </style>
+</head>
+<body class="text-white bg-gray-900">
+
+  <div class="flex  ">
+    <!-- Sidebar -->
+    <aside class="sidebar h-96 overflow-auto fixed p-4">
+      <h1 class="text-2xl font-bold mb-6 text-gray-500">HTML Course</h1>
+      <nav class="sidebar overflow-auto fixed">
+        <ul class="space-y-4">
+          <li><a href="#introduction" class="hover:text-blue-700 text-gray-500">Introduction</a></li>
+          <li><a href="#htmlworking" class="hover:text-blue-700 text-gray-500">HTML Working</a></li>
+          <li><a href="#htmlinstalling" class="hover:text-blue-700 text-gray-500">HTML Installing</a></li>
+          <li><a href="#htmlexecution" class="hover:text-blue-700 text-gray-500">HTML Execution</a></li>
+          <!-- Repeated items -->
+          <li><a href="#htmlpagestructure" class="hover:text-blue-700 text-gray-500">HTML Page Structure</a></li>
+          <li><a href="#htmltags" class="hover:text-blue-700 text-gray-500">HTML Tags</a></li>
+          <li><a href="#htmlelements" class="hover:text-blue-700 text-gray-500">HTML Elements</a></li>
+         
+       
+        </ul>
+      </nav>
+    </aside>
+    <main class="flex-1 p-6">
+      <div class="flex justify-between items-center text-center  mt-28">
+        <button type="button" id="previousBtn" class="text-white bg-cyan-500 shadow-lg shadow-cyan-500/50 border border-yellow-700  focus:outline-none font-medium rounded-full text-sm px-5 py-2.5">Previous</button>
+        <button type="button" id="nextBtn" class="text-white bg-cyan-500 shadow-lg shadow-cyan-500/50 border border-yellow-700  hover:bg-green-800 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5">Next</button>
+      </div>
+      <section id="introduction" class="mb-10 section">
+        <h2 class="text-2xl md:text-4xl text-white font-bold underline mb-6">Welcome to Our HTML Course</h2>
+        <h2 class="text-lg md:text-2xl mb-4 text-white">HTML Introduction</h2>
+        <p class="text-sm md:text-base text-white leading-relaxed">
+            Today, I'm writing this tutorial to create a resource that will help you learn HTML in less than 30 days. Here's a recommended timeline for learning HTML, based on your educational background:
+            <br><br>
+            <strong>High School students and younger:</strong> Around 25 days<br>
+            <strong>Those beyond High School:</strong> Around 20 days<br>
+            <strong>College students and above:</strong> Around 10-20 days<br><br>
+            My name is Abichal Shukla, and today I'm writing this comprehensive HTML tutorial for all of you. Let's jump right into HTML!
+          </p>
+        <h2 class="text-lg md:text-2xl mb-3  mt-3 text-white">What is HTML?</h2>
+        <p class="text-sm md:text-base text-white leading-relaxed">
+            HTML (HyperText Markup Language) was created by Tim Berners-Lee in 1991 as a standard for creating web pages. It's a markup language used to structure content on the web, defining elements like headings, paragraphs, links, and images. HTML forms the backbone of web content.
+            <br><br>
+            In layman's terms, HTML is like the skeleton of a website. It's a set of instructions that tells a web browser how to display text, images, videos, and other elements on a webpage. Think of it as the building blocks that create the structure and look of a website, similar to how bricks and mortar are used to build a house.
+            <br><br>
+            <strong>In a nutshell:</strong><br>
+            - HTML is the language of the web, used to create websites.<br>
+            - HTML defines the barebone structure or layout of web pages that we see on the Internet.<br>
+            - HTML consists of a set of tags contained within an HTML document, and the associated files typically have either a ".html" or ".htm" extension.<br>
+            - There are several versions of HTML, with HTML5 being the most recent version.
+        </p>
+      
+
+
+   
+        <h2 class="text-lg md:text-2xl mb-3 mt-3 text-white">Features of HTML</h2>
+        <p class="text-sm md:text-base text-white leading-relaxed">
+         
+         
+          
+            It is platform-independent. For example, Chrome displays the same pages identically across different operating systems such as Mac, Linux, and <br>
+            Images, videos, and audio can be added to a web page (For example - YouTube shows videos on their website)<br>
+            HTML is a markup language and not a programming language.<br>
+            It can be integrated with other languages like CSS, JavaScript, etc. to show interactive (or dynamic) web pages
+        </p>
+        <h2 class="text-lg md:text-2xl mb-3 mt-3 text-white">Why Term is HyperText & Markup Language</h2>
+        <p class="text-sm md:text-base text-white leading-relaxed">
+            The term 'Hypertext Markup Language' is composed of two main words: 'hypertext' and 'markup language.' 'Hypertext' refers to the linking of text with other documents, while 'markup language' denotes a language that utilizes a specific set of tags.
+
+            Thus, HTML is the practice of displaying text, graphics, audio, video etc. in a certain way using special tags.
+            
+            Note: Tags are meaningful texts enclosed in angle braces, like '<...>'. For example, the '<head>' tag. Each tag has a unique meaning and significance in building an HTML page, and it can influence the web page in various ways.
+        </p>
+    
+
+    
+  
+        <h2 class="text-lg md:text-2xl mb-3 mt-3 text-white">Quick Exercise</h2>
+        <p class="text-sm md:text-base text-white leading-relaxed">
+          Open a webpage of your choice, right-click, and select 'View Page Source'...
+        </p>
+        <div class=" mt-6 rounded-full shadow-md">
+          <iframe width="670" height="377" src="https://www.youtube.com/embed/BzYMFd-lQL4" title="Learn HTML for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+   
+
+      <!-- HTML, CSS, and JavaScript Analogy -->
+      
+        <h2 class="text-lg md:text-2xl mb-4 text-white">A beautiful analogy to understand HTML, CSS, and JavaScript</h2>
+        <div class="flex gap-4 items-center borderbox-cover  justify-between ">
+          <img src="https://i.ibb.co/XJHV2k5/html.jpg" alt="HTML">
+          <i class="fa-solid   text-white fa-arrow-right"></i>
+          <img src="https://i.ibb.co/T8rX9tN/css.jpg" alt="CSS">
+          <i class="fa-solid text-white lg:w-28 fa-arrow-right"></i>
+          <img src="https://i.ibb.co/L669tPw/javascript.jpg" alt="JavaScript">
+
+        </div> 
+        <div class="  flex  mt-4  text-white justify-between ">
+
+
+             <p>Car Skeleten (only body is ) <span class=" text-red-500">HTML</span></p>
+             <p>Car Painted And Decoreted <span class=" text-red-500"> CSS</span></p>
+             <p>Car Engine and  Internal Login <span class="text-red-500">JAVASCRIPT</span></p>
+        </div>
+
+    
+    
+        <h2 class="text-lg md:text-2xl mb-3 mt-3 text-white">History of HTML</h2>
+        <p class="text-sm md:text-base  text-white leading-relaxed">
+     
+     
+            =>  In 1989, Tim Berners-Lee established the World Wide Web (www), and in 1991, he created the first version of HTML. <br>
+              => From 1995 to 1997, further work was done to develop and refine different versions of HTML.<br>
+              => In 1999, a committee was organized that standardized HTML 4.0, a version still used by many today.<br>
+              => The latest and most stable version of HTML is 5, also known as HTML5.<br>
+             => Feel free to read more history of HTML here on the <a class=" text-blue-700 underline ">HTML Wikipedia page </a> but I will move ahead and cover important aspects of HTML.<br>
+              
+             => In the next tutorial, we'll continue our journey and understand how websites work <br>
+           </p>
+        </section>
+ 
+
+
+
+
+        <section id="htmlworking" class="mb-10 mt-11 section  " >
+            <h2 class=" text-lg md:text-2xl mb-3 mt-3 text-white">  HTML Working </h2>
+       <div class=" text-white mb-4  ">
+        <p>You must have heard of frontend and backend. Frontend refers to the visible part of a website or app that users interact with, like the tables, images, and buttons. It's built using languages like HTML, CSS, and JavaScript. The backend, on the other hand, handles behind-the-scenes operations like storing and processing data when users interact with the frontend. It uses languages like Python, Ruby, and Java. In essence, frontend is what users see, while backend manages the functionality.</p>
+
+ 
+        </div>
+        <h2 class=" text-lg md:text-2xl mb-3 mt-3 text-white"> How Does HTML Work </h2>
+        <p class="text-sm md:text-base  text-white leading-relaxed">
+           When we want to access any information on the internet, we search for it using a web browser. The web browser retrieves the content from web servers, where it is stored in the form of HTML documents.
+           
+           An HTML document is created by writing code with specific tags in a code editor of your choice. The document is then saved with the '.html' extension. Once saved, the browser interprets the HTML document, reads it, and renders the web page.</p>
+
+<div class=" shadow-lg">
+
+
+    <img src="https://i.ibb.co/W20q9Wv/htmlcode.png" alt="...please wait ">
+    
+    <!-- <a href="https://ibb.co/5RktDWh"><img src="https://i.ibb.co/W20q9Wv/htmlcode.png" alt="htmlcode" border="0"></a> -->
+</div> 
+
+<p class=" text-white font-regular ">The text editor has the HTML code of a website. This website can now be viewed in a beautifully rendered format using a computer program known as a web browser.</p>
+
+
+<h2  class=" text-lg md:text-2xl mb-3 mt-3 text-white"> What is a Web Browser?</h2>
+
+<div  class=" text-white  "> 
+
+
+    <p>A web browser is a program that understands HTML tags and renders them in a human-readable format that is easily viewable by people visiting the website. Developers write code in HTML because it's a straightforward way to instruct the web browser on what to display. In the next section, I'll show you how to set  up VS Code for writing your own HTML code and rendering it in a web browser.</p>
+</div>
+<h2  class=" text-lg md:text-2xl mb-3  mt-3 text-white ">What is an HTML Document?</h2>
+
+
+<div class="  text-sm md:text-base  text-white leading-relaxed">
+
+<p class=" text-sm md:text-base  text-white leading-relaxed ">
+    An HTML document is a text document saved with the '.html' or '.htm' extension, containing text and specific tags enclosed in '< >'. These tags provide the necessary instructions for configuring the web page. The tags themselves are standardized and fixed. The structure of an HTML document will be explained later in this HTML tutorial.</p>
+
+</div>
+
+ <h2 class="text-lg md:text-2xl mb-3 mt-3 text-white ">What is a Rendered Page:</h2>
+ <div class="    text-sm md:text-base  text-white leading-relaxed ">
+    <p>The rendered page is the output screen of our HTML Document which is the page displayed on the browser.  </p>
+ </div>
+
+  <h2 class=" text-lg md:text-2xl mb-3 mt-3 text-white">
+    How does a basic website work?</h2>
+
+
+     <div class="text-sm md:text-base  text-white leading-relaxed">
+
+<p>
+
+ 
+    Web Browser(client) requests websites like <a href="www.alphabet.com" class=" text-blue-700 underline"> www.alphabet.com</a> from the web server.
+Web server in return sends HTML, CSS, and JavaScript files to it.
+HTML, CSS, and JavaScript files are parsed by a web browser which is responsible for showing you a beautiful website.
+</p>
+     </div>
+
+
+      <h2 class=" text-lg md:text-2xl mb-3 mt-3 text-white ">How does a browser work?</h2>
+       <div class="text-sm md:text-base  text-white leading-relaxed">
+
+       <p>A web browser plays a crucial role in parsing and rendering HTML code to the client. A web browser is a complex program that performs many tasks behind the scenes. Here's a summary of how it works:
+
+    A browser is an application that reads HTML documents and displays them as web pages. Browsers can't access the content directly from where it's stored; this is where servers come into play.
+    A server acts as an intermediary, listening to browser requests and fulfilling them by delivering the HTML document to the browser.
+    Web browsers perform two main tasks: parsing and rendering.
+    During the parsing stage, the browser receives raw bytes, which are converted into characters. These characters are then converted into tokens, which in turn are transformed into nodes. These nodes are organized into a tree-like data structure known as the DOM (Document Object Model). 
+    Once the DOM tree is constructed, the browser moves on to the rendering stage. At this point, each node in the DOM tree is rendered and displayed on the screen.
+    Dont worry about how browser exactly works just yet. Rather focus on learning HTML. In the next tuotrial we will install VS Code and some extensions for writing our HTML cod</p>
+
+
+       </div>
+
+
+        </section>
+
+       
+         
+
+
+      
+<section  id="htmlinstalling" class="mb-10 mt-11 section">
+
+
+
+   <h2 class=" text-2xl md:text-4xl text-white font-bold underline mb-3 mt-3 "> HTMl Installing</h2>
+
+   <div class="text-white mb-4">
+  
+     <p>Let's get our hands dirty and start preparing to write some code. In this tutorial, we will install VS Code and some related extensions for faster and more efficient HTML development.</p>
+
+   </div>
+
+
+    <h2 class=" text-2xl md-text-1 text-white font-bold underline mb-3 mt-3 "> What are the prerequisites to learning HTML?</h2>
+
+
+
+     <div class=" text-white mb-4 "> 
+    <p>
+
+      I can safely say that there are no prerequisites to learning HTML. HTML is the language of the web and is often the first step that web developers take in learning to code.
+    </p>  
+    
+    </div>
+
+
+     <h2   class=" text-2xl md:text-1 mt- underline text-white font-bold  mb-3 mt-3   ">
+      Tools needed to make an HTML page: 
+     </h2>
+      <div class=" text-white  mb-4 ">
+
+
+         <p>
+
+
+
+          (1) HTML Editor: It's a straightforward tool where every piece of HTML content must be written. You can use any text editor of your choice. In this tutorial, we're using Visual Studio Code because it's lightweight and open-source.
+
+Popular editors for HTML development include text editors like <a href="https://notepad-plus-plus.org/" class=" text-blue-700">Notepad++</a> and <a href="https://support.apple.com/en-in/guide/textedit/welcome/mac" class=" text-blue-700">TextEdit</a>, code editors such as <a href="https://www.sublimetext.com/" class=" text-blue-700">Sublime Text </a> and <a href="https://code.visualstudio.com/" class=" text-blue-700 ">Visual Studio Code</a> , and full-fledged IDEs like WebStorm and Eclipse. Online platforms like CodePen and JSFiddle are also commonly used for quick HTML editing and testing.
+
+Note: You can write HTML even in a Notepad. Text editors like VS code make these things easier.
+
+(2) Browser: HTML tags are not displayed by browsers; instead, they are read and interpreted to render the web page. In a web browser, HTML structures are displayed in a styled and visually appealing form. In this tutorial, we are using Google Chrome. Other commonly used browsers include Chromium, Firefox, Safari on Mac, and Microsoft Edge.
+         </p>
+      </div>
+ <h2 class="  text-2xl md-text-1 text-white font-bold underline mb-3 mt-3 ">Installation & Setup of Visual Studio Code for HTML:</h2>
+        <div class=" text-white mb-4">We will install and set up HTML to optimize its utility for creating web pages. Additionally, we'll install extensions in Visual Studio Code to enhance its functionality. If you're unsure about which editor to use, you can confidently start with Visual Studio Code. You won't regret it; it's one of the best free code editors available in the market.
+
+          Search for "Visual Studio Code download" on Google
+          Download <a href="https://code.visualstudio.com/download" class="text-blue-700">Visual Studio Code</a>for your Operating System. I am using Windows so I will install it for Windows
+          Here is a quick video showing VS Code Installation: 
+        </div>
+
+        <div class=" mt-6 rounded-full shadow-md">
+          <iframe width="670" height="377" src="https://jmp.sh/s/s3lHQ7GMeCu1N16fJNSk" title="install vs code   www.alphabet.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+          
+          
+          
+          <!-- https://www.veed.io/view/90904608-1d32-4022-8cea-62b13af1468a?panel=share -->
+        </div>
+      </section>
+      <section  id="htmlexecution" class=" mb-10 mt-11 section">
+        
+        <h1 class=" text-2xl md-text-1 text-white font-bold underline mb-3 mt-3  "> HTML Execution</h1>
+        
+        <div class=" text-white ">
+          <h2 class="text-1xl md-text-1 text-white font-bold underline mb-3 mt-3 ">
+            
+            Your Journey to Creating Your First Website Begins Here!
+          </h2>
+          
+          <p>Let's mark this as an important milestone: the creation of your first website! And what's a better way to start than with the traditional "Hello, World!"?
+          </p>
+        </div>
+        
+        
+        <div>
+          
+          <h2 class=" mt-3 mb-3 text-white text-1xl text-base ">
+            Why "Hello, World!"?
+            
+          </h2>
+          <p class=" text-white ">In the programming world, "Hello, World!" is more than just a phrase. It's a tradition, an emotion, a simple program that teaches you the syntax and gets you started. And guess what? HTML is no different!
+            
+            Our first website will display the text 'Hello World'</p>
+          </div>
+          <div class=" text-white mb-3 mt-3 ">
+            
+            <h2 class="text-2xl md-text-1 text-white font-bold underline mb-3 mt-3">
+              Let's Get Started: Setting Up Your VS Code
+            </h2>
+            <p  >If you haven't already set up your environment, let's begin by opening <a href="https://code.visualstudio.com/download" class=" no-underline hover:underline  shadow-md text-blue-700">Visual Studio Code (VS Code)</a>.</p>
+            
+            
+          </div>
+          <div class=""><a href="https://ibb.co/Fq114jt"><img src="https://i.ibb.co/jZYYk1F/vscode.png" alt="vscode" border="0"></a>
+          </div>
+          
+          
+          <div class=" text-white mb-3 mt-3  ">
+            <h2 class=" text-white  mb-3 mt-3  text-2xl font-bold  ">Creating a New File</h2>
+            
+            <p>Click on "Open Folder" and open a folder somewhere on your  computer. I am opening a folder named html-tutorial
+              
+              Once VS Code is open, you'll want to create a new file:
+              
+              Click on the "New File" icon in VS Code.
+              Type the filename as "index.html" and hit Enter.</p></div>
+              
+              <div class="  shadow-md  ">
+
+                <iframe width="670" height="377" src="https://jmp.sh/s/P9PQMdnYd095Q0OcxCDN" title="install vs code   www.alphabet.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+              </div>
+
+
+  <div class=" text-2xl mb-3 mt-3  ">
+
+ <h2 class=" mb-3 mt-3 font-bold text-white " >
+
+  Pasting the Code
+ </h2>
+ <p class=" text-white">
+  Now that your file is ready, copy the following code and paste it into your "index.html" file.
+
+
+ </p>
+ </div>
+  
+
+ <div>
+  <p class="text-white mb-4">
+   
+    <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello, World!&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+   </p>
+
+
+
+ </div>
+
+
+
+
+
+
+<div>
+  <h2 class=" text-2xl mb-3 mt-3   leading-relaxed text-white ">
+    
+    Going Live using the "live server" extension
+  </h2>
+  <p class=" text-white ">
+    
+    To see your webpage in action, locate the "Go Live" icon at the bottom-right corner of your VS Code window and click it. If you don't see this icon, you probably haven't installed the Live Server extension, which we discussed in a previous tutorial.
+  </p>
+  </div>
+  <div >
+    <div class="flex flex-col">
+      <img src="https://i.ibb.co/5YP0B67/vs-code-go-live.png" alt="vs-code-go-live" class="shadow-lg imglive mt-3 mb-3">
+      <img src="https://i.ibb.co/FbdF4hK/hello-world-html.png" alt="hello-world-html" class="shadow-lg imglive  mt-3 mb-3">
+    </div>
+    <p class=" text-white mt-3">Now, you will see a button within VS Code. Clicking on this button will allow you to preview your HTML right within the editor.</p>
+  </div>
+ 
+  
+
+
+
+  <div>
+    <p class=" text-white  mt-3  ">You don't even need a browser to render plain HTML. This live preview feature in VS Code is perfect for this HTML tutorial, allowing you to build and preview your entire HTML website without ever leaving the editor.</p>
+    <div class="  mt-3 mb-3">
+    <img src="https://i.ibb.co/djmnc3s/live-preview-html-in-action.png" alt="live-preview-html-in-action" border="0">
+    </div>
+  </div>
+ 
+
+  
+
+
+</section>
+<section id="htmlpagestructure" class="   mb-10 mt-11 section">
+<div class="  text-white   ">
+   <h2 class="mb-3 mt-3 font-bold text-white ">HTML Page Structure</h2>
+    <div class="  mt-3 text-white  ">
+      <p>An HTML document is structured using a set of nested tags. Each tag is enclosed within <…> angle brackets and acts as a container for content or other HTML tags. Let's take a look at a basic HTML document structure:</p>
+    </div >
+</div>
+<div class=" mt-3 flex justify-center items-center w-[80%]"  >
+  <p class="text-white mb-4">
+   
+    <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+// content here
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+   </p>
+
+
+
+ </div>
+ <div class=" text-white mt-3 mb-3 ">
+
+
+  <h2>This is how the title appears on an HTML page:</h2>
+
+
+  <div class="   shadow-md  ">
+
+    <iframe width="670" height="377" src="https://jmp.sh/s/SGnOVLFPHstUTLANAV1j" title="install vs code   www.alphabet.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+  </div>
+ </div>
+<div class=" text-white mt-3 mb-3" >
+ <h3>A typical HTML page looks like this:</h3>
+<img src="https://i.ibb.co/C2KcPdg/html-homepage-layout-demo.png" alt="html-homepage-layout-demo" border="0">
+<p>Almost every website uses this structure. The main content goes inside the body tag. No worries if this looks complicated; let's break it down!
+
+  Note: These are the essential elements for a basic HTML document:
+   
+   <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+   </p>
+</div>
+ 
+
+  <div class=" text-white">
+  <h2>  DOCTYPE Declaration</h2>
+  <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+   </code></pre>
+    <p>The<code>&lt;!DOCTYPE html&gt;
+    </code>declaration informs the web browser about the HTML version being used. The latest version is HTML5. But if this changes in the future (maybe 10 years down the line), the doctype declaration will be helpful!</p>
+  </div>
+  <div class=" text-white mt-3 mb-3">
+    <h2>  HTML Root Element</h2>
+    <pre class="language-markup"><code>&lt;HTML&gt;
+     </code></pre>
+      <p>The<code>&lt;HTML&gt;
+      
+      
+      </code> tag is the root element that encapsulates all the content on the page</p>
+      <pre class="language-markup"><code>&lt;/HTML&gt;
+      </code></pre>
+      <p>The<code>&lt;/HTML&gt;
+      
+      
+      </code> The </html> tag marks the end of the  <code>&lt;HTML&gt;
+      
+      
+      </code> section.</p>
+
+    </div>
+    <div class=" text-white mt-3 mb-3">
+      <h2>  Head Section</h2>
+      <pre class="language-markup"><code>&lt;Head&gt;
+       </code></pre>
+        <p>The<code>&lt;Head&gt;
+        </code>The  tag contains metadata and links to external resources like CSS and JavaScript files.</p>
+
+
+        <pre class="language-markup"><code>&lt;/Head&gt;
+
+        </code></pre>
+
+        <p>The<code>&lt;/Head&gt;
+        </code>The </head> tag marks the end of the  <code>&lt;Head&gt;
+        </code>
+ section..</p>
+
+
+
+      </div>
+
+
+      <div class=" text-white mt-3 mb-3">
+        <h2>  title Tag </h2>
+        <pre class="language-markup"><code>&lt;title&gt; document &lt;/title&gt;
+          
+         </code></pre>
+          <p>
+         
+          The &lt;/title&gt; tag sets the title of the web page, which is displayed in the browser's title bar or tab.
+        
+        </p>   </div>
+
+
+
+
+
+
+        <div class=" text-white mt-3 mb-3">
+          <h2>  Body Tag</h2>
+          <pre class="language-markup"><code>&lt;Body&gt;
+           </code></pre>
+            <p>The<code>&lt;Body&gt;
+            </code> tag contains the visible content of the web page. This is where text, images, and other elements go./p>
+    
+    
+            <pre class="language-markup"><code>&lt;/Body&gt;
+    
+            </code></pre>
+    
+            <p>The<code>&lt;/Body&gt;
+            </code> tag marks the end of the visible content of the web page.
+
+            Every HTML page should include at least these essential elements to define the basic layout. In upcoming tutorials, we'll dive deeper into the fascinating world of HTML.
+            </code>
+     section..</p>
+    
+    
+    
+          </div>
+       
+
+
+          <div class=" mt-3 mb-3">
+
+ <h2>Summary</h2>
+
+  <p>The &lt;!DOCTYPE&gt; html tag specifies that the document is an HTML5 document.
+    The&lt;HTML&gt; tag defines the document to be in English.
+    The &lt;Head&gt; section contains metadata and the title of the webpage, which appears in the browser's title bar.
+    The &lt;Body&gt; section contains the content that will be displayed on the webpage.
+    The h1 and p are two types of tags. We will learn about more tags in the later section</p>
+          </div>
+        <div class=" mt-3 mb-3 text-white">
+
+
+         <h2 class=" mb-3"> Visualization of an HTML Document:</h2>
+
+
+
+          <p>The following image provides a visual representation of the HTML structure:</p>
+
+
+           <div class=" mt-4 mb-4 ">
+
+            <img src="https://i.ibb.co/cbwFTqS/html-tag-structure-image.png" alt="html-tag-structure-image" border="0">
+
+           </div>
+
+         </div>
+         <div class="text-white">
+
+
+          <h2>How This Content Appears in a Web Browser:</h2>
+           <p>Consider this html code:</p>
+
+           <div class=" mt-3   mb-3  w-[80%]"  >
+            <p class="text-white mb-4">
+             
+              <pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+          &lt;head&gt;
+          &lt;title&gt;My First HTML Page&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          &lt;h1&gt;  This is a heading &lt;/h1&gt;
+          &lt;p&gt; This is a paragraph &lt;/p&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;</code></pre>
+             </p>
+          
+          
+          
+           </div>
+           
+         </div>
+         <div class=" mt-3 mb-3 text-white">
+
+
+          <p>Below is an image showing how this HTML document will be rendered in a web browser</p>
+        <img src="https://i.ibb.co/B2sndCF/html-headings.png" alt="html-headings" border="0" class=" mt-3 mb-3 ">
+        <p>In the browser, the title bar will display the content from the  &lt;head&gt; section, specifically the  &lt;titlw&gt; tag. The main area of the browser window (usually a white background) will display the content inside the <body> tag.
+
+          In the upcoming sections, we will learn about html tags and elements. </p>
+         </div>
+    
+
+</section>
+
+<section id="htmltags" class="   mb-10 mt-11 section">
+   
+   <div class=" text-white mt-3 mb-3 ">
+      <h2 class=" mt-3 mb-3 ">HTML Tags</h2>
+
+      <p>If you want to build a beautiful website, tags are essential elements that help you achieve that.
+      
+        An HTML tag acts as a container for content or other HTML tags. Tags are words enclosed within   &lt;and&gt; angle brackets.
+        
+        They serve as keywords that instruct the web browser on how to format and display the content</p>
+      .</div>
+
+
+
+
+       <div class=" text-white mt-3 mb-3">
+         <h2 class=" mt-3 mb-3 ">Commonly used tags in HTML</h2>
+       
+       1.&lt;title&gt;: Sets the title of the web page.
+        2.&lt;meta&gt;: Provides metadata such as character set, author, and viewport settings.
+        3.&lt;link&gt;: Links external resources like stylesheets.
+          
+
+       </div>
+       <div class=" text-white mt-3 mb-3">
+        <h2 class=" mt-3 mb-3 ">Text Formatting Tags</h2>
+      1.&lt;p&gt; : Paragraph.<br>
+      2.&lt;h1&gt;&lt;h2&gt;&lt;h3&gt;&lt;h4&gt;&lt;h5&gt;&lt;h6&gt;: headings.<br>
+       3.&lt;Strong&gt;: Strong emphasis (typically bold).<br>
+       4.&lt;em&gt;:  Strong emphasis (typically bold).<br>
+       5.&lt;br&gt;: Line break.<br>
+       6.&lt;hr&gt;: Horizontal rule.<br>
+
+       
+
+      </div>
+      <div class=" text-white mt-3 mb-3">
+        <h2 class=" mt-3 mb-3 ">List Tags</h2>
+      
+      1.&lt;ul&gt;: Unordered list.<br>
+       2.&lt;ol&gt;:  Ordered list.<br>
+       3.&lt;li&gt;: List item.<br>
+         
+
+      </div>
+      <div class=" text-white mt-3 mb-3">
+        <h2 class=" mt-3 mb-3 ">Hyperlink and Media Tags</h2>
+      
+      1.&lt;a&gt;:  Anchor (used for links).
+       2.&lt;image&gt;:Image.
+       3.&lt;audio&gt;: Audio Content.
+       4.&lt;video&gt;:Video Content.
+         
+
+      </div>
+      <div class=" text-white mt-3 mb-3">
+        <h2 class=" mt-3 mb-3 ">Hyperlink and Media Tags</h2>
+      
+      1.&lt;form&gt;:  Form.<br>
+       2.&lt;imput&gt;:Inputfiels.<br>
+       3.&lt;textarea&gt;: Textarea.<br>
+       4.&lt;button&gt;:Button.<br>
+       5.&lt;select&gt;:DropdownList.<br>
+       6.&lt;option&gt;: Options within a&lt;select&gt; or&lt;datalist&gt;.<br>
+         
+
+      </div>
+
+
+      <div class=" text-white mt-3 mb-3">
+        <h2 class=" mt-3 mb-3 ">TableTags</h2>
+      
+      1.&lt;table&gt;: Table.<br>
+       2.&lt;tr&gt;:Tablerow.<br>
+       3.&lt;td&gt;: Table Data cell.<br>
+       4.&lt;th&gt;: : Table header cell.<br>
+       5.&lt;thead&gt;:Table header group.<br>
+       6.&lt;tbody&gt;: Table Body group.<br>
+       7.&lt;tfoot&gt;: Table Footer group.<br>
+         
+
+      </div>
+     
+      <div class=" text-white mt-3 mb-3">
+        <h2 class=" mt-3 mb-3 ">Semantic Tags</h2>
+      
+      1.&lt;header&gt;: Header.<br>
+       2.&lt;footer&gt;:Footer.<br>
+       3.&lt;article&gt;:Article.<br>
+       4.&lt;section&gt;: Section.<br>
+       5.&lt;nav&gt;:Navigation.<br>
+       6.&lt;aside&gt;: Siderbar Content.<br>
+      
+      </div>
+
+ <div class=" text-white mt-3 mb-3 ">
+  <h2>Paired and Unpaired HTML Tags</h2>
+
+  <p>Well, that was a really long list. Don't worry we will study these in detail. In HTML, tags can be broadly categorized into two types:</p>
+ </div>
+     <div class=" mt-3 mb-3 text-white">
+
+
+      <h2>Paired Tags (Container Tags)</h2>
+      <p>These are tags that come in pairs, consisting of an opening tag and a corresponding closing tag. The content goes between these two tags.
+
+        Opening Tag: The opening tag starts with  and ends with . For example, 
+        Closing Tag: The closing tag also starts with but includes a forward slash / before the tag name, and ends with >. For example,</p>
+         <h2 class=" mt-3 mb-3 ">Examples:</h2>
+         <p>Paragraphs:&lt;p&gt;This is a paragraph.</p>
+         Headings: &lt;h1&gt;This is a heading.</h1> </p>
+     </div>
+     <div class="mt-3 mb-3 text-white">
+
+      <h2>Unpaired Tags (Self-Closing Tags or Stand-Alone Tags)</h2>
+      <p>These are tags that don't require a closing tag. They are self-contained, encapsulating all the information within a single tag.
+
+        Self-Closing Tag: A self-closing tag starts with < and ends with /> (though the / is optional in HTML5). For example, &lt;img&gt; or &lt;br&gt;.
+        Note: Later if you happen to use react or a framework like Next.js, you will have to close the tag like this&lt;/br&gt; &lt;hr/&gt;. So it is better to cultivate the habit!</p>
+
+
+
+         <h2 class=" mt-3 mb-3 ">Examples of self-closing tags:</h2>
+         <p>Line Break: &lt;br&gt;
+          Horizontal Rule:&lt;hr/&gt;
+          Image: &lt;img src="image.jpg" alt="please wait" &gt;</p>
+     </div>
+      <div class=" mt-3 mb-3  text-white">
+         <h2>Pictorial Representation of Tags
+        
+        </h2>
+        
+        
+        
+        <p>The image below offers a visual representation of how tags are structured in HTML. As you can see, an element can contain other elements, which may also contain additional elements, forming a tree-like structure. This hierarchy can include self-closing tags as well as nested tags, as illustrated in the picture</p>
+
+
+
+        <img src="https://i.ibb.co/pv6hzt7/representation-of-html-tags.png" alt="representation-of-html-tags" border="0"  class=" mt-6 mb-3">
+      </div>
+
+
+ </section>
+
+  <section class="  mt-11 mb-10 " id="htmlelements">
+
+
+    <div class=" mt-3 mb-3 text-white">
+    <h2>  HTML Elements</h2>
+    <p>Beginners often get confused between HTML elements, nested elements, and tags. Let's clarify the difference by understanding each one step-by-step.</p>
+
+    </div>
+
+     <div class="mt-3 mb-3 text-white">
+    <h3>What is an HTML Element?</h3>
+    <p>An HTML element is a complete set that consists of a start tag (or opening tag), content, and an end tag (or closing tag).
+
+      HTML Element = Start Tag + Content + End Tag
+      
+      For example:.</p>
+
+
+      <div class=" mt-3   mb-3  w-[80%]"  >
+        <p class="text-white mb-4">
+         
+          <pre class="language-markup"><code>
+          &lt;h1&gt;  This is  our first  heading &lt;/h1&gt;
+    </code></pre>
+         </p>
+      
+      
+      
+       </div>
+       <p>In this example, &lt;h1&gt; is the start tag, "This is our first heading" is the content, and &lt;/h1&gt; is the end tag. Together, they form an HTML element.</p>
+    </div>
+     
+
+
+     <div class=" mt-3 mb-3 text-white">
+
+
+      <h2>What is a Nested HTML Element?</h2>
+      <p>A nested HTML element is an HTML structure where one element is placed inside another element.
+
+        The enclosing element is often referred to as the "parent," while the enclosed element is called the "child."
+        
+        Nested HTML Element = One HTML Element Inside Another HTML Element
+        
+        For example:</p>
+
+        <div class=" mt-3   mb-3  w-[80%]"  >
+          <p class="text-white mb-4">
+           
+            <pre class="language-markup"><code>
+            &lt;h1&gt;   &lt;b&gt; This is  our first  heading   &lt;/b&gt;&lt;/h1&gt;
+      </code></pre>
+           </p>
+        
+
+
+           
+           
+          </div>
+          <p>In this example, the  &lt;b&gt;  element (child) is nested inside the  &lt;h1&gt; element (parent).</p>
+     </div>
+     <div class="mt-3 mb-3 text-white">
+
+
+      <h2>.
+
+        What is an Empty HTML Element?</h2>
+        <p>An empty HTML element is one that does not have a closing tag or content. These elements are also known as "void elements" or "self-closing elements."
+
+          Empty HTML Element = Tags with No Content
+          
+          For example:</p>
+
+          <div class=" mt-3   mb-3  w-[80%]"  >
+            <p class="text-white mb-4">
+             
+              <pre class="language-markup"><code>
+              &lt;br&gt;
+        </code></pre>
+             </p>
+          
+  
+  
+             
+             
+            </div>
+            <p>This is a break tag, which has no content and no closing tag. It's used to insert a line break within text or other inline elements. The  &lt;hr&gt; tag, used for horizontal rules, is another example of an empty or void element.</p>
+     </div>
+
+      <div class="mt-3 mb-3 text-white">
+        <h2>HTML Tags vs. Elements</h2>
+         <h3>
+          HTML Tags
+         </h3>
+
+
+         <p>HTML tags are the markers that define the start and end of an element. They are wrapped in angle brackets, like &lt;p&gt; and &lt;/p&gt;.</p>
+
+
+          <h2>HTML Elements</h2>
+          <p>An HTML element includes an opening tag, content, and a closing tag, forming a complete set. For example,&lt;p&gt; This is a paragraph.&lt;/p&gt;.</p>
+      </div>
+      <div class=" mt3 mb-3 text-white">
+        <h2>Key Takeaways</h2>
+
+        <p>Tags set boundaries; elements include tags plus content.
+          Tags come in pairs (most of the time), whereas elements may include nested elements.
+          Self-closing or void elements like &lt;br&gt; are still considered elements, even though they don't have a closing tag or content.
+          Elements can be "parent" or "child" when nested, but tags cannot.&lt;/p&gt;
+      </div>
+
+    
+  </section>
+
+
+    </main>
+    
+
+
+     
+  </div>
+  <script>
+    const sections = document.querySelectorAll('.section');
+    let currentIndex = 0;
+
+     consol.log( "currentd",currentIndex)
+    function showSection(index) {
+      sections.forEach((section, i) => {
+        section.classList.toggle('active', i === index);
+      });
+    }
+
+    showSection(currentIndex);
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % sections.length;
+      showSection(currentIndex);
+    });
+
+  
+    document.getElementById('previousBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+      showSection(currentIndex);
+    }); 
+   
+ 
+  
+  </script>
+
+
+
+</body>
+</html>
